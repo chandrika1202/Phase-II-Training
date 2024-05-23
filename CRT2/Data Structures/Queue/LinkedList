@@ -1,0 +1,82 @@
+# Linked list implementation of Queue
+class jim:
+    def __init__(self, dt):
+        self.dt = dt
+        self.nxt = None
+ 
+def linkedlist(curr):
+    if curr == None:
+        print("Empty Linked list")
+        return
+    while curr != None:
+        print(curr.dt, end = " --> ")
+        curr = curr.nxt 
+    print()
+
+def enQueue(head, ele):
+    temp = jim(ele) 
+    if head == None:
+        return temp
+    tail = head 
+ 
+    while tail.nxt != None:
+        tail = tail.nxt 
+    tail.nxt = temp
+    return head 
+
+
+def deQueue(head):
+    if head == None:
+	    return None 
+    secondNode = head.nxt 
+    head.nxt = None 
+    return secondNode
+
+    
+queHead = None 
+linkedlist(queHead)
+queHead = enQueue(queHead, 34)
+queHead = enQueue(queHead, 35)
+queHead = enQueue(queHead, 36)
+queHead = enQueue(queHead, 37)
+linkedlist(queHead)
+queHead = deQueue(queHead)
+linkedlist(queHead)
+queHead = deQueue(queHead)
+linkedlist(queHead)
+
+
+#Queue Operations
+def enQueue(Q, ele):
+    Q.append(ele)
+    print(ele, " enqueued successfully")
+ 
+ 
+def deQueue(Q):
+    if len(Q) == 0:
+        print("Queue is empty")
+        return
+    print(Q[0], " element is getting deleted")
+    Q.pop(0)
+ 
+Q = []
+enQueue(Q, 10)
+enQueue(Q, 20)
+enQueue(Q, 30)
+enQueue(Q, 40)
+print(Q)
+ 
+deQueue(Q)
+print(Q)
+ 
+deQueue(Q)
+print(Q)
+ 
+deQueue(Q)
+print(Q)
+ 
+deQueue(Q)
+print(Q)
+ 
+deQueue(Q)
+print(Q)

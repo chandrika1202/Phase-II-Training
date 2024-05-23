@@ -1,0 +1,51 @@
+#Trees--->Traversal
+class jim:
+    def __init__(self,dt):
+        self.dt=dt
+        self.left=None
+        self.right=None
+def preOrderTraversal(root):   #Root-Left--Right
+        if root==None:
+             return
+        print(root.dt,end=' ')
+        preOrderTraversal(root.left)
+        preOrderTraversal(root.right)
+
+def inOrderTraversal(root):    #Left-Root-Right
+        if root==None:
+             return
+        inOrderTraversal(root.left)
+        print(root.dt,end=' ')
+        inOrderTraversal(root.right)
+
+def postOrderTraversal(root):     #Left-Right-Root
+        if root==None:
+             return
+        postOrderTraversal(root.left)
+        postOrderTraversal(root.right)
+        print(root.dt,end=' ')
+        
+m1 = jim(11)
+m2 = jim(12)
+m3 = jim(13)
+m4 = jim(14)
+m5 = jim(15)
+m6 = jim(16)
+m7 = jim(17)
+m8 = jim(18)
+m9 = jim(19)
+m10 = jim(20)
+
+m1.left = m2
+m1.right = m3
+m2.left = m4
+m2.right = m5
+m3.left = m6
+m4.right = m7
+m5.right = m8
+m6.left = m9
+m6.right = m10 
+
+inOrderTraversal(m1)
+preOrderTraversal(m1)
+postOrderTraversal(m1)
