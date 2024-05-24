@@ -1,0 +1,15 @@
+# Linear Search 
+ 
+nums = [12, 13, 25, 48, 64, 95];
+trgt = 48
+pos = -1
+for idx in range(len(nums)):
+    if nums[idx] == trgt:
+        pos = idx 
+        break 
+ 
+if pos == -1:
+    print("Target not found")
+else:
+    print("Target found at position: ", pos)
+ 
