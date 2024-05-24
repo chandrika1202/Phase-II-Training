@@ -1,0 +1,14 @@
+#Bubble Sort
+def BubbleSort(nums):
+    n=len(nums)
+    pos=n-1
+    while pos>0:
+        for idx in range(0, pos):
+            if nums[idx]>nums[idx+1]:
+                nums[idx],nums[idx+1]=nums[idx+1],nums[idx]
+        print(nums)
+        pos-=1
+nums=[9, 8, 7, 6, 5, 4, 3, 2, 1]
+print("Before sorting:",nums)
+BubbleSort(nums)
+print("After sorting:",nums)

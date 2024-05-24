@@ -1,0 +1,17 @@
+#Insertion Sort
+def InsertionSort(nums):
+    n=len(nums)
+    for firstEleIdx in range(1,n):
+        temp=nums[firstEleIdx]
+        prevIdx = firstEleIdx
+        while prevIdx >= 0:
+            if nums[prevIdx]>temp:
+                nums[prevIdx+1]=nums[prevIdx]
+            else:
+                break
+            prevIdx-=1
+            nums[prevIdx+1]=temp
+nums=[9, 8, 7, 6, 5, 4, 3, 2, 10]
+print("Before sorting:",nums)
+InsertionSort(nums)
+print("After sorting:",nums)

@@ -1,0 +1,18 @@
+#Selection Sort
+def SelectionSort(nums):
+    n=len(nums)
+    pos=n-1
+    while pos>0:
+        maxEleIdx = pos
+        for idx in range(0, pos-1):
+            if nums[maxEleIdx]>nums[idx+1]:
+                maxEleIdx = idx
+        if nums[maxEleIdx]<nums[idx]:
+                temp = nums[maxEleIdx]
+                nums[maxEleIdx]=nums[pos]
+                nums[pos]=temp
+        pos-=1
+nums=[9, 8, 7, 6, 5, 4, 3, 2, 10]
+print("Before sorting:",nums)
+SelectionSort(nums)
+print("After sorting:",nums)
